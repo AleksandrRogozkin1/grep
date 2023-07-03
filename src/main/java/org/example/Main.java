@@ -15,7 +15,7 @@ public class Main
         System.out.print("Введите текст:");
         Scanner scanner1 = new Scanner(System.in);
         String text = scanner1.nextLine();
-        System.out.print("Введите текст:");
+        System.out.print("Введите слово:");
         Scanner scanner2 = new Scanner(System.in);
         String word = scanner2.nextLine();
 // [.!?]\s*  цей вираз знайшов, сам не вмію писати

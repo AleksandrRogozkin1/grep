@@ -1,6 +1,5 @@
 package org.example.utils;
 
-
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -9,7 +8,6 @@ import java.util.Scanner;
 public class FileReader {
     private String sourceString;
     private List<String> stringFromFile=new ArrayList<>();
-
 
     public FileReader(String sourceString){
         this.sourceString=sourceString;

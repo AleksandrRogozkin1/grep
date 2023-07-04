@@ -1,29 +1,21 @@
 package org.example;
+import org.example.grepServices.GrepService;
+import org.example.utils.FileReader;
 
-
+import java.util.List;
+import java.util.Queue;
 import java.util.Scanner;
 
+public class Main{
 
-
-
-public class Main
-{
-
-    public static void main(String[] args)
-    {
-        String result = "";
-        System.out.print("Введите текст:");
-        Scanner scanner1 = new Scanner(System.in);
-        String text = scanner1.nextLine();
+    public static void main(String[] args) {
         System.out.print("Введите слово:");
-        Scanner scanner2 = new Scanner(System.in);
-        String word = scanner2.nextLine();
-// [.!?]\s*  цей вираз знайшов, сам не вмію писати
-        String sentences[] = text.split("[.!?]\\s*");
-        for(int i=0; i<sentences.length;i++){
-            if(sentences[i].contains(word)) result+=sentences[i]+"\n";
-        }
-        System.out.println(result);
+        String word = new Scanner(System.in).nextLine();
 
+        List<String> res=new FileReader("text").reading();
+        System.out.println("Повний текст:"+res);
+
+        String grepService=new GrepService().grepService(res,word);
+        System.out.println(grepService);
     }
 }
